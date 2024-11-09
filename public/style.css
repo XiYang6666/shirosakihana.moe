@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply overflow-hidden;
+  @apply select-none;
+  @apply bg-cover;
+  @apply bg-zinc-800;
+  @apply bg-center;
+  background-image: url("api/getRandomBackground");
+}

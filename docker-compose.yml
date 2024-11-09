@@ -1,0 +1,8 @@
+services:
+    mainpage:
+        build: .
+        container_name: mainpage
+        ports:
+            - 3000:3000
+        env_file:
+            - .env
