@@ -35,6 +35,6 @@ useHead({
 const links = {
   主页: "https://xiyang6666.top",
   Github: "https://github.com/XiYang6666",
-  Docker镜像: "https://docker.shirosakihana.moe",
+  镜像站: "https://mirror.shirosakihana.moe",
 };
 </script>
