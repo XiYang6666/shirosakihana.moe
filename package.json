@@ -16,5 +16,6 @@
     },
     "devDependencies": {
         "@nuxtjs/tailwindcss": "^6.12.2"
-    }
+    },
+    "packageManager": "pnpm@9.6.0"
 }
