@@ -22,9 +22,19 @@
 </template>
 
 <script lang="ts" setup>
+useHead({
+  title: "小花可爱 n(*≧▽≦*)n",
+  link: [
+    {
+      rel: "shortcut icon",
+      href: "/favicon.ico",
+    },
+  ],
+});
+
 const links = {
   主页: "https://xiyang6666.top",
   Github: "https://github.com/XiYang6666",
-  "Docker镜像": "https://docker.shirosakihana.moe",
+  Docker镜像: "https://docker.shirosakihana.moe",
 };
 </script>
