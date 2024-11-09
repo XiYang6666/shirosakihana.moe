@@ -1,7 +1,7 @@
 services:
-    mainpage:
+    shirosakihana-moe:
         build: .
-        container_name: mainpage
+        container_name: shirosakihana-moe
         ports:
             - 3000:3000
         env_file:
