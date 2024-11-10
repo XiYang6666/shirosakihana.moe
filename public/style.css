@@ -8,5 +8,5 @@ body {
   @apply bg-cover;
   @apply bg-zinc-800;
   @apply bg-center;
-  background-image: url("api/randomHana");
+  background-image: url("api/randomBg");
 }
