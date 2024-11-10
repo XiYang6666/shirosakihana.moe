@@ -36,5 +36,6 @@ const links = {
   主页: "https://xiyang6666.top",
   Github: "https://github.com/XiYang6666",
   镜像站: "https://mirror.shirosakihana.moe",
+  随机小花图片: "https://shirosakihana.moe/api/randomHana",
 };
 </script>
