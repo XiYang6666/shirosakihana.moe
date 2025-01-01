@@ -18,6 +18,9 @@
         <a :href="link">{{ name }}</a>
       </span>
     </div>
+
+    <span class="footer fixed bottom-4 text-lg text-zinc-400 font-thin text-center" v-html="footer"></span>
+
   </div>
 </template>
 
@@ -38,4 +41,5 @@ const links = {
   镜像站: "https://mirror.shirosakihana.moe",
   随机小花图片: "https://shirosakihana.moe/api/randomHana",
 };
+const footer = `<a href="https://icp.gov.moe/?keyword=20250307" target="_blank">萌ICP备20250307号</a>`
 </script>
