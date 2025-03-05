@@ -2,7 +2,9 @@ import fs from "fs";
 import { randomInt } from "crypto";
 
 export default defineEventHandler((event) => {
-  const imgList = fs.readdirSync("public/bg");
+  const is_mobile = "mobile" in getQuery(event);
+  const base_path = is_mobile ? "/bg/mobile/" : "/bg/pc/";
+  const imgList = fs.readdirSync(`public${base_path}`);
   const imgName = imgList[randomInt(imgList.length)];
-  return sendRedirect(event, `/bg/${imgName}`);
+  return sendRedirect(event, `${base_path}${imgName}`);
 });
