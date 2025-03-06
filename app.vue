@@ -6,7 +6,10 @@
 
       <hr class="w-5/6 border-gray-900 m-5" />
 
-      <span class="text-xl text-pink-500 font-bold mb-2" v-if="isBirthday">今天是小花的生日哦</span>
+      <ClientOnly>
+        <span class="text-xl text-pink-500 font-bold mb-2" v-if="isBirthday">🎂 小花生日快乐 🎂</span>
+      </ClientOnly>
+
 
       <span v-for="[name, link] of Object.entries(links)" class="text-base text-zinc-700">
         <a :href="link">{{ name }}</a>
@@ -46,14 +49,14 @@ const checkBirthday = () => {
   const targetDay = 7;
   return today.getMonth() + 1 === targetMonth && today.getDate() === targetDay;
 };
+
 const isBirthday = checkBirthday();
 
 onMounted(() => {
-  if (import.meta.client) {
-    const confetti = new JSConfetti();
-    if (isBirthday) {
-      confetti.addConfetti();
-    }
+  console.log("mounted");
+  const confetti = new JSConfetti();
+  if (isBirthday) {
+    confetti.addConfetti();
   }
 });
 
