@@ -12,7 +12,7 @@ body {
   background-image: url("api/randomBg");
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (orientation: portrait) {
   body {
     background-image: url("api/randomBg?mobile");
   }
