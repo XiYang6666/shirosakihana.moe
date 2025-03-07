@@ -8,8 +8,12 @@ body {
   @apply bg-cover;
   @apply bg-zinc-800;
   @apply bg-center;
+}
 
-  background-image: url("api/randomBg");
+@media only screen and (orientation: landscape) {
+  body {
+    background-image: url("api/randomBg");
+  }
 }
 
 @media only screen and (orientation: portrait) {
