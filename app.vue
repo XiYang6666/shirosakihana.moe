@@ -10,7 +10,6 @@
         <span class="text-xl text-pink-500 font-bold mb-2" v-if="isBirthday">🎂 小花生日快乐 🎂</span>
       </ClientOnly>
 
-
       <span v-for="[name, link] of Object.entries(links)" class="text-base text-zinc-700">
         <a :href="link">{{ name }}</a>
       </span>
