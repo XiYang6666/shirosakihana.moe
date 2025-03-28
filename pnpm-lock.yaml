@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@nuxt/scripts':
-        specifier: ^0.10.5
-        version: 0.10.5(@unhead/vue@2.0.2(vue@3.5.13(typescript@5.6.3)))(db0@0.3.1)(ioredis@5.6.0)(magicast@0.3.5)(typescript@5.6.3)
+        specifier: ^0.11.5
+        version: 0.11.5(@unhead/vue@2.0.2(vue@3.5.13(typescript@5.6.3)))(db0@0.3.1)(ioredis@5.6.0)(magicast@0.3.5)(nuxt@3.16.1(@parcel/watcher@2.5.1)(@types/node@22.13.9)(db0@0.3.1)(ioredis@5.6.0)(magicast@0.3.5)(rollup@4.37.0)(terser@5.39.0)(typescript@5.6.3)(vite@6.2.3(@types/node@22.13.9)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.0))(yaml@2.7.0))(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3))
       js-confetti:
         specifier: ^0.12.0
         version: 0.12.0
@@ -427,14 +427,15 @@ packages:
     resolution: {integrity: sha512-Ri8bmT6MljpVR4DlXf9+acfgGaI4OTEdAzJU5aF2rJS78abtpnBxjXBG65kuhoL1LUlfKppDl8fTkUw5LM2JXQ==}
     engines: {node: ^14.18.0 || >=16.10.0}
 
-  '@nuxt/scripts@0.10.5':
-    resolution: {integrity: sha512-MZTGWN/kjkKBZzuJssIrzHO9evMWtceaLowF9R7FMZjACFLYWqnf127EP/2pzDfwii5+NkZUe5mfyeIDxXbkUw==}
+  '@nuxt/scripts@0.11.5':
+    resolution: {integrity: sha512-dGoeUh2GTCWffgSbNv8bURHRiLkddU6rZgmWikQViyYBrQ6rN3qHPA1GI50x/KJeZjzQJK2hh1E35Y7EkwU18w==}
     peerDependencies:
-      '@stripe/stripe-js': ^5.6.0
+      '@stripe/stripe-js': ^5.10.0
       '@types/google.maps': ^3.58.1
       '@types/vimeo__player': ^2.18.3
       '@types/youtube': ^0.1.0
-      '@unhead/vue': ^1
+      '@unhead/vue': ^2.0.0-rc.8
+      nuxt: ^3.16.0
     peerDependenciesMeta:
       '@stripe/stripe-js':
         optional: true
@@ -933,14 +934,18 @@ packages:
   '@vue/shared@3.5.13':
     resolution: {integrity: sha512-/hnE/qP5ZoGpol0a5mDi45bOd7t3tjYJBjsgCsivow7D48cJeV5l05RD82lPqi7gRiphZM37rnhW1l6ZoCNNnQ==}
 
-  '@vueuse/core@12.8.2':
-    resolution: {integrity: sha512-HbvCmZdzAu3VGi/pWYm5Ut+Kd9mn1ZHnn4L5G8kOQTPs/IwIAmJoBrmYk2ckLArgMXZj0AW3n5CAejLUO+PhdQ==}
+  '@vueuse/core@13.0.0':
+    resolution: {integrity: sha512-rkgb4a8/0b234lMGCT29WkCjPfsX0oxrIRR7FDndRoW3FsaC9NBzefXg/9TLhAgwM11f49XnutshM4LzJBrQ5g==}
+    peerDependencies:
+      vue: ^3.5.0
 
-  '@vueuse/metadata@12.8.2':
-    resolution: {integrity: sha512-rAyLGEuoBJ/Il5AmFHiziCPdQzRt88VxR+Y/A/QhJ1EWtWqPBBAxTAFaSkviwEuOEZNtW8pvkPgoCZQ+HxqW1A==}
+  '@vueuse/metadata@13.0.0':
+    resolution: {integrity: sha512-TRNksqmvtvqsuHf7bbgH9OSXEV2b6+M3BSN4LR5oxWKykOFT9gV78+C2/0++Pq9KCp9KQ1OQDPvGlWNQpOb2Mw==}
 
-  '@vueuse/shared@12.8.2':
-    resolution: {integrity: sha512-dznP38YzxZoNloI0qpEfpkms8knDtaoQ6Y/sfS0L7Yki4zh40LFHEhur0odJC6xTHG5dxWVPiUWBXn+wCG2s5w==}
+  '@vueuse/shared@13.0.0':
+    resolution: {integrity: sha512-9MiHhAPw+sqCF/RLo8V6HsjRqEdNEWVpDLm2WBRW2G/kSQjb8X901sozXpSCaeLG0f7TEfMrT4XNaA5m1ez7Dg==}
+    peerDependencies:
+      vue: ^3.5.0
 
   abbrev@3.0.0:
     resolution: {integrity: sha512-+/kfrslGQ7TNV2ecmQwMJj/B65g5KVq1/L3SGVZ3tCYGqlzFuFCGBZJtMP99wH3NpEUyAjn0zPdPUg0D+DwrOA==}
@@ -2199,9 +2204,6 @@ packages:
 
   ofetch@1.4.1:
     resolution: {integrity: sha512-QZj2DfGplQAr2oj9KzceK9Hwz6Whxazmn85yYeVuS3u9XTMOGMRx0kO95MQ+vLsj/S/NwBDMMLU5hpxvI6Tklw==}
-
-  ohash@1.1.6:
-    resolution: {integrity: sha512-TBu7PtV8YkAZn0tSxobKY2n2aAQva936lhRrj6957aDaCf9IEtqsKbgMzXE/F/sjqYOwmrukeORHNLe5glk7Cg==}
 
   ohash@2.0.11:
     resolution: {integrity: sha512-RdR9FQrFwNBNXAr4GixM8YaRZRJ5PUWbKYbE5eOsrwAjJW0q2REGcf79oYPsLyskQCZG1PLN+S/K1V00joZAoQ==}
@@ -3779,20 +3781,20 @@ snapshots:
       pathe: 2.0.3
       std-env: 3.8.1
 
-  '@nuxt/scripts@0.10.5(@unhead/vue@2.0.2(vue@3.5.13(typescript@5.6.3)))(db0@0.3.1)(ioredis@5.6.0)(magicast@0.3.5)(typescript@5.6.3)':
+  '@nuxt/scripts@0.11.5(@unhead/vue@2.0.2(vue@3.5.13(typescript@5.6.3)))(db0@0.3.1)(ioredis@5.6.0)(magicast@0.3.5)(nuxt@3.16.1(@parcel/watcher@2.5.1)(@types/node@22.13.9)(db0@0.3.1)(ioredis@5.6.0)(magicast@0.3.5)(rollup@4.37.0)(terser@5.39.0)(typescript@5.6.3)(vite@6.2.3(@types/node@22.13.9)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.0))(yaml@2.7.0))(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3))':
     dependencies:
       '@nuxt/kit': 3.16.1(magicast@0.3.5)
       '@unhead/vue': 2.0.2(vue@3.5.13(typescript@5.6.3))
-      '@vueuse/core': 12.8.2(typescript@5.6.3)
+      '@vueuse/core': 13.0.0(vue@3.5.13(typescript@5.6.3))
       consola: 3.4.2
       defu: 6.1.4
       h3: 1.15.1
       magic-string: 0.30.17
+      nuxt: 3.16.1(@parcel/watcher@2.5.1)(@types/node@22.13.9)(db0@0.3.1)(ioredis@5.6.0)(magicast@0.3.5)(rollup@4.37.0)(terser@5.39.0)(typescript@5.6.3)(vite@6.2.3(@types/node@22.13.9)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.0))(yaml@2.7.0)
       ofetch: 1.4.1
-      ohash: 1.1.6
+      ohash: 2.0.11
       pathe: 2.0.3
-      pkg-types: 1.3.1
-      semver: 7.7.1
+      pkg-types: 2.1.0
       sirv: 3.0.1
       std-env: 3.8.1
       ufo: 1.5.4
@@ -3820,6 +3822,7 @@ snapshots:
       - magicast
       - typescript
       - uploadthing
+      - vue
 
   '@nuxt/telemetry@2.6.6(magicast@0.3.5)':
     dependencies:
@@ -4354,22 +4357,18 @@ snapshots:
 
   '@vue/shared@3.5.13': {}
 
-  '@vueuse/core@12.8.2(typescript@5.6.3)':
+  '@vueuse/core@13.0.0(vue@3.5.13(typescript@5.6.3))':
     dependencies:
       '@types/web-bluetooth': 0.0.21
-      '@vueuse/metadata': 12.8.2
-      '@vueuse/shared': 12.8.2(typescript@5.6.3)
+      '@vueuse/metadata': 13.0.0
+      '@vueuse/shared': 13.0.0(vue@3.5.13(typescript@5.6.3))
       vue: 3.5.13(typescript@5.6.3)
-    transitivePeerDependencies:
-      - typescript
 
-  '@vueuse/metadata@12.8.2': {}
+  '@vueuse/metadata@13.0.0': {}
 
-  '@vueuse/shared@12.8.2(typescript@5.6.3)':
+  '@vueuse/shared@13.0.0(vue@3.5.13(typescript@5.6.3))':
     dependencies:
       vue: 3.5.13(typescript@5.6.3)
-    transitivePeerDependencies:
-      - typescript
 
   abbrev@3.0.0: {}
 
@@ -5797,8 +5796,6 @@ snapshots:
       destr: 2.0.3
       node-fetch-native: 1.6.6
       ufo: 1.5.4
-
-  ohash@1.1.6: {}
 
   ohash@2.0.11: {}
 
