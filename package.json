@@ -1,23 +1,29 @@
 {
-    "name": "shirosakihana.moe",
-    "private": true,
-    "type": "module",
-    "scripts": {
-        "build": "nuxt build",
-        "dev": "nuxt dev",
-        "generate": "nuxt generate",
-        "preview": "nuxt preview",
-        "postinstall": "nuxt prepare"
-    },
-    "dependencies": {
-        "@nuxt/scripts": "^0.11.5",
-        "js-confetti": "^0.12.0",
-        "nuxt": "^3.16.1",
-        "vue": "latest",
-        "vue-router": "latest"
-    },
-    "devDependencies": {
-        "@nuxtjs/tailwindcss": "^6.13.2"
-    },
-    "packageManager": "pnpm@10.7.0"
+  "name": "shirosakihana.moe",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "sync": "bash -c \"rsync -avz --delete dist/* hanataka2137@154.40.45.52:/data/caddy/site/mirror.shirosakihana.moe/\""
+  },
+  "dependencies": {
+    "@nuxt/scripts": "^0.11.5",
+    "@tailwindcss/typography": "^0.5.16",
+    "highlight.js": "^11.11.1",
+    "markdown-it": "^14.1.0",
+    "nuxt": "^3.16.1",
+    "vue": "latest",
+    "vue-router": "latest"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.13.2",
+    "@types/markdown-it": "^14.1.2",
+    "sass": "^1.86.0",
+    "sass-loader": "^16.0.5"
+  },
+  "packageManager": "pnpm@10.7.0"
 }

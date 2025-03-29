@@ -1,34 +1,19 @@
 <template>
-  <div class="bg h-dvh w-dvw overflow-hidden flex items-center justify-center flex-col">
-    <div
-      class="content bg-white w-[450px] max-w-[86vw] h-[230px] rounded-2xl bg-opacity-35 flex items-center justify-center flex-col">
-      <span class="text-2xl text-zinc-800 font-bold line-through">我才不是什么萝莉控</span>
-
-      <hr class="w-5/6 border-gray-900 m-5" />
-
-      <ClientOnly>
-        <span class="text-xl text-pink-500 font-bold mb-2" v-if="isBirthday">🎂 小花生日快乐 🎂</span>
-      </ClientOnly>
-
-      <span v-for="[name, link] of Object.entries(links)" class="text-base text-zinc-700">
-        <a :href="link">{{ name }}</a>
-      </span>
+  <Header></Header>
+  <div class="bg w-full min-h-dvh bg-black bg-opacity-20 dark:bg-opacity-80 flex items-center flex-col">
+    <!-- 占位符 -->
+    <div class="w-full h-16"></div>
+    <!-- 内容 -->
+    <div class="w-10/12 m-8 p-8 bg-zinc-200 dark:bg-zinc-950 rounded-xl">
+      <div class="prose max-w-full dark:prose-invert text-zinc-800 dark:text-zinc-200" v-html="$md.render(content)">
+      </div>
     </div>
-
-    <span class="footer fixed bottom-4 text-lg text-pink-400 font-base text-center" v-html="footer"></span>
-  </div>
-
-  <div class="music absolute top-1 right-1">
-    <iframe frameborder="no" width="330" height="86"
-      src="//music.163.com/outchain/player?type=2&id=1348722587&auto=0&height=66"></iframe>
   </div>
 </template>
 
 <script lang="ts" setup>
-import JSConfetti from "js-confetti";
-
 useHead({
-  title: "小花可爱 n(*≧▽≦*)n",
+  title: "HanaMirror",
   link: [
     {
       rel: "shortcut icon",
@@ -36,33 +21,21 @@ useHead({
     },
   ],
 });
-useScriptNpm({
-  packageName: "js-confetti",
-  file: "dist/js-confetti.browser.js",
-  version: "0.12.0",
-});
 
-const checkBirthday = () => {
-  const today = new Date();
-  const targetMonth = 3;
-  const targetDay = 7;
-  return today.getMonth() + 1 === targetMonth && today.getDate() === targetDay;
-};
 
-const isBirthday = checkBirthday();
-
-onMounted(() => {
-  console.log("mounted");
-  const confetti = new JSConfetti();
-  if (isBirthday) {
-    confetti.addConfetti();
+const content: Ref<string> = useState()
+if (import.meta.server) {
+  const { data, error } = await useAsyncData(async () => {
+    const { readFile } = await import('node:fs/promises')
+    const content = await readFile('assets/index.md', 'utf-8')
+    return content
+  })
+  if (error.value) {
+    console.error(error)
+    content.value = (error.value instanceof Error ? error.value.message : "Error")
+  } else {
+    content.value = data.value || "Error"
   }
-});
+}
 
-const links = {
-  Github: "https://github.com/XiYang6666/shirosakihana.moe",
-  镜像站: "https://mirror.shirosakihana.moe",
-  随机小花图片: "https://shirosakihana.moe/api/randomHana",
-};
-const footer = `<a href="https://icp.gov.moe/?keyword=20250307" target="_blank">萌ICP备20250307号</a>`;
 </script>
