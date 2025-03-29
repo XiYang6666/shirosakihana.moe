@@ -52,9 +52,8 @@ const checkBirthday = () => {
 const isBirthday = checkBirthday();
 
 onMounted(() => {
-  console.log("mounted");
-  const confetti = new JSConfetti();
   if (isBirthday) {
+    const confetti = new JSConfetti();
     confetti.addConfetti();
   }
 });
