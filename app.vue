@@ -27,7 +27,7 @@ const content: Ref<string> = useState()
 if (import.meta.server) {
   const { data, error } = await useAsyncData(async () => {
     const { readFile } = await import('node:fs/promises')
-    const content = await readFile('assets/index.md', 'utf-8')
+    const content = await readFile('README.md', 'utf-8')
     return content
   })
   if (error.value) {
