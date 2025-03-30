@@ -22,7 +22,6 @@ body {
   @apply dark:scrollbar-thumb-zinc-700;
   @apply scrollbar-track-zinc-200;
   @apply dark:scrollbar-track-zinc-800;
-
 }
 
 @media (prefers-color-scheme: light) {
@@ -31,4 +30,3 @@ body {
 @media (prefers-color-scheme: dark) {
   @include meta.load-css("highlight.js/styles/github-dark.min.css");
 }
-
