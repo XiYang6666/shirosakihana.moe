@@ -17,7 +17,9 @@
         "vue-router": "latest"
     },
     "devDependencies": {
-        "@nuxtjs/tailwindcss": "^6.13.2"
+        "@nuxtjs/tailwindcss": "^6.13.2",
+        "sass": "^1.86.0",
+        "sass-loader": "^16.0.5"
     },
     "packageManager": "pnpm@10.7.0"
 }
