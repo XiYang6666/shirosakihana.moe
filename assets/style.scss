@@ -15,6 +15,14 @@ body {
   @media only screen and (orientation: portrait) {
     background-image: url("https://shirosakihana.moe/api/randomBg?mobile");
   }
+
+  @apply scrollbar-w-2;
+  @apply scrollbar-thumb-rounded-full;
+  @apply scrollbar-thumb-zinc-300;
+  @apply dark:scrollbar-thumb-zinc-700;
+  @apply scrollbar-track-zinc-200;
+  @apply dark:scrollbar-track-zinc-800;
+
 }
 
 @media (prefers-color-scheme: light) {
@@ -23,3 +31,4 @@ body {
 @media (prefers-color-scheme: dark) {
   @include meta.load-css("highlight.js/styles/github-dark.min.css");
 }
+

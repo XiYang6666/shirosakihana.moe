@@ -23,7 +23,8 @@
     "@nuxtjs/tailwindcss": "^6.13.2",
     "@types/markdown-it": "^14.1.2",
     "sass": "^1.86.0",
-    "sass-loader": "^16.0.5"
+    "sass-loader": "^16.0.5",
+    "tailwindcss-scrollbar": "^0.1.0"
   },
   "packageManager": "pnpm@10.7.0"
 }
