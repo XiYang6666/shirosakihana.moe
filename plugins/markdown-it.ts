@@ -18,9 +18,5 @@ export default defineNuxtPlugin((nuxtApp) => {
     },
   });
 
-  return {
-    provide: {
-      md: md,
-    },
-  };
+  return { provide: { md } };
 });
