@@ -59,6 +59,12 @@ sudo systemctl restart docker
 # 更改后 docker pull ghcr.shirosakihana.moe/username/repo:tag
 ```
 
+额外支持:
+
+docker 安装脚本: `https://mirror.shirosakihana.moe/https://get.docker.com/`
+
+docker 源证书: `https://mirror.shirosakihana.moe/https://download.docker.com/linux/<release name>/gpg`
+
 ## Mikanani 镜像
 
 将原链接的 `https://mikanani.me` 替换为 `https://mikanani.shirosakihana.moe`.

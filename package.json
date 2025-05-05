@@ -7,8 +7,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "sync": "bash -c \"rsync -avz --delete dist/* hanataka2137@154.40.45.52:/data/caddy/site/mirror.shirosakihana.moe/\""
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
     "@nuxt/scripts": "^0.11.5",
