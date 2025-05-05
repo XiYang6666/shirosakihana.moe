@@ -10,15 +10,15 @@
         "postinstall": "nuxt prepare"
     },
     "dependencies": {
-        "@nuxt/scripts": "^0.11.5",
+        "@nuxt/scripts": "^0.11.6",
         "js-confetti": "^0.12.0",
-        "nuxt": "^3.16.1",
+        "nuxt": "^3.17.1",
         "vue": "latest",
         "vue-router": "latest"
     },
     "devDependencies": {
-        "@nuxtjs/tailwindcss": "^6.13.2",
-        "sass": "^1.86.0",
+        "@nuxtjs/tailwindcss": "^6.14.0",
+        "sass": "^1.87.0",
         "sass-loader": "^16.0.5"
     },
     "packageManager": "pnpm@10.7.0"
