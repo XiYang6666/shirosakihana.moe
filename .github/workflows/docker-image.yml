@@ -34,7 +34,7 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
 
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag xiyang6666/shirosakihana_moe:$(git rev-parse --abbrev-ref HEAD)-$(git rev-list --count HEAD)
+        run: docker build . --file Dockerfile --tag xiyang6666/shirosakihana_moe:$(git rev-parse --abbrev-ref HEAD)
 
       - name: Push the Docker image
-        run: docker push xiyang6666/shirosakihana_moe:$(git rev-parse --abbrev-ref HEAD)-$(git rev-list --count HEAD)
+        run: docker push xiyang6666/shirosakihana_moe:$(git rev-parse --abbrev-ref HEAD)
