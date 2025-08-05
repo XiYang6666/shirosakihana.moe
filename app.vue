@@ -1,21 +1,25 @@
 <template>
   <div class="bg h-dvh w-dvw overflow-hidden flex items-center justify-center flex-col">
-    <div
-      class="content bg-white w-[450px] max-w-[86vw] h-[230px] rounded-2xl bg-opacity-35 flex items-center justify-center flex-col">
-      <span class="text-2xl text-zinc-800 font-bold line-through">我才不是什么萝莉控</span>
+    <main>
+      <div
+        class="content bg-white w-[450px] max-w-[86vw] h-[230px] rounded-2xl bg-opacity-35 flex items-center justify-center flex-col">
+        <span class="text-2xl text-zinc-800 font-bold line-through">我才不是什么萝莉控</span>
 
-      <hr class="w-5/6 border-gray-900 m-5" />
+        <hr class="w-5/6 border-gray-900 m-5" />
 
-      <ClientOnly>
-        <span class="text-xl text-pink-500 font-bold mb-2" v-if="isBirthday">🎂 小花生日快乐 🎂</span>
-      </ClientOnly>
+        <ClientOnly>
+          <span class="text-xl text-pink-500 font-bold mb-2" v-if="isBirthday">🎂 小花生日快乐 🎂</span>
+        </ClientOnly>
 
-      <span v-for="[name, link] of Object.entries(links)" class="text-base text-zinc-700">
-        <a :href="link">{{ name }}</a>
-      </span>
-    </div>
+        <span v-for="[name, link] of Object.entries(links)" class="text-base text-zinc-700">
+          <a :href="link">{{ name }}</a>
+        </span>
+      </div>
+    </main>
 
-    <span class="footer fixed bottom-4 text-lg text-pink-400 font-base text-center" v-html="footer"></span>
+    <footer>
+      <span class="footer fixed bottom-4 text-lg text-pink-400 font-base text-center" v-html="footer"></span>
+    </footer>
   </div>
 
   <div class="music absolute top-1 right-1">
