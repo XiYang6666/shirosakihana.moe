@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.1.0",
     "@nuxt/scripts": "^0.11.13",
     "@tailwindcss/typography": "^0.5.19",
     "github-slugger": "^2.0.0",

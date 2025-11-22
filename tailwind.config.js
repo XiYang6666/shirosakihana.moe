@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
     darkMode: "media",
-    content: ["./app.vue", "./public/style.css"],
+    content: ["{srcDir}/**/*.{vue,scss}"],
     theme: {
         extend: {
             typography: ({ theme }) => ({
@@ -52,4 +52,3 @@ export default {
     },
     plugins: [require('@tailwindcss/typography'), require('tailwindcss-scrollbar')],
 };
-
