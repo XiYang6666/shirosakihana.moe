@@ -41,9 +41,7 @@
     ></iframe>
   </div>
 
-  <FlushBackgroundButton
-    class="absolute right-1 bottom-1"
-  ></FlushBackgroundButton>
+  <FlushBackgroundButton class="fixed right-1 bottom-1"></FlushBackgroundButton>
 </template>
 
 <script lang="ts" setup>
