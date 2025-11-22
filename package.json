@@ -12,8 +12,10 @@
   "dependencies": {
     "@nuxt/scripts": "^0.11.13",
     "@tailwindcss/typography": "^0.5.19",
+    "github-slugger": "^2.0.0",
     "highlight.js": "^11.11.1",
     "markdown-it": "^14.1.0",
+    "markdown-it-anchor": "^9.2.0",
     "nuxt": "^4.2.1",
     "vue": "latest",
     "vue-router": "latest"

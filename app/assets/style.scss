@@ -30,3 +30,35 @@ body {
 @media (prefers-color-scheme: dark) {
   @include meta.load-css("highlight.js/styles/github-dark.min.css");
 }
+
+a.header-anchor {
+  @apply inline-block opacity-0 -translate-x-1 transition duration-150 ease-in-out ml-1 text-current no-underline;
+}
+
+h1:hover a.header-anchor,
+h2:hover a.header-anchor,
+h3:hover a.header-anchor,
+h4:hover a.header-anchor,
+h5:hover a.header-anchor,
+h6:hover a.header-anchor,
+h1:focus-within a.header-anchor,
+h2:focus-within a.header-anchor,
+h3:focus-within a.header-anchor,
+h4:focus-within a.header-anchor,
+h5:focus-within a.header-anchor,
+h6:focus-within a.header-anchor {
+  @apply opacity-100 translate-x-0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  scroll-margin-top: 4rem;
+}
+
+.header-anchor:focus {
+  @apply opacity-100 translate-x-0;
+}

@@ -4,6 +4,11 @@
 
 powered by Cloudflare Workers & docker registry.
 
+- [Github 镜像](#github-镜像)
+- [Docker 镜像](#docker-镜像)
+- [Mikanani 镜像](#mikanani-镜像)
+- [Gravatar 镜像](#gravatar-镜像)
+
 ## Github 镜像
 
 在 Github 链接前加上 `https://gh.shirosakihana.moe/`.
@@ -61,13 +66,13 @@ sudo systemctl restart docker
 
 额外支持:
 
-docker 安装脚本: `https://mirror.shirosakihana.moe/https://get.docker.com/`
+docker 安装脚本: `https://mirror.shirosakihana.moe/https://get.docker.com`
 
 docker 源证书: `https://mirror.shirosakihana.moe/https://download.docker.com/linux/<release name>/gpg`
 
 ## Mikanani 镜像
 
-将原链接的 `https://mikanani.me` 替换为 `https://mikanani.shirosakihana.moe`.
+使用 `https://mikanani.shirosakihana.moe/` 替换 `https://mikanani.me/`.
 
 e.g.:
 
@@ -77,3 +82,7 @@ e.g.:
 ```
 
 仅代理了 /RSS 目录方便 RSS 订阅, 仍需科学上网获取订阅链接.
+
+## Gravatar 镜像
+
+使用 `https://gravatar.shirosakihana.moe/avatar/` 替换 `https://gravatar.com/avatar/`.
