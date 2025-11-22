@@ -10,19 +10,19 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/scripts": "^0.11.6",
-    "@tailwindcss/typography": "^0.5.16",
+    "@nuxt/scripts": "^0.11.13",
+    "@tailwindcss/typography": "^0.5.19",
     "highlight.js": "^11.11.1",
     "markdown-it": "^14.1.0",
-    "nuxt": "^3.17.1",
+    "nuxt": "^4.2.1",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.14.0",
     "@types/markdown-it": "^14.1.2",
-    "sass": "^1.87.0",
-    "sass-loader": "^16.0.5",
+    "sass": "^1.94.2",
+    "sass-loader": "^16.0.6",
     "tailwindcss-scrollbar": "^0.1.0"
   },
   "packageManager": "pnpm@10.7.0"
