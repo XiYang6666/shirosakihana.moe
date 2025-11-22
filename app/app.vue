@@ -18,9 +18,13 @@
       </div>
     </div>
   </main>
+
+  <FlushBackgroundButton class="fixed right-2 bottom-1"></FlushBackgroundButton>
 </template>
 
 <script lang="ts" setup>
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
 useHead({
   title: "HanaMirror",
   link: [
