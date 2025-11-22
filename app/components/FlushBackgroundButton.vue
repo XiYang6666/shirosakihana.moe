@@ -1,7 +1,7 @@
 <template>
   <div>
     <button
-      class="flush-bg-button relative bg-zinc-200 bg-opacity-35 dark:bg-zinc-800 dark:bg-opacity-50 rounded-full w-12 h-12 hover:bg-opacity-80 dark:hover:bg-zinc-700 transition-colors duration-700 ease-in-out transform-gpu"
+      class="flush-bg-button relative bg-zinc-200 bg-opacity-35 dark:bg-zinc-800 dark:bg-opacity-60 rounded-full w-12 h-12 hover:bg-opacity-80 dark:hover:bg-zinc-700 transition-colors duration-700 ease-in-out transform-gpu"
       @click="setRandomBg"
     >
       <div
