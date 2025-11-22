@@ -1,30 +1,44 @@
 <template>
-  <div class="bg h-dvh w-dvw overflow-hidden flex items-center justify-center flex-col">
+  <div
+    class="bg h-dvh w-dvw overflow-hidden flex items-center justify-center flex-col"
+  >
     <main>
       <div
-        class="content bg-white w-[450px] max-w-[86vw] h-[230px] rounded-2xl bg-opacity-35 flex items-center justify-center flex-col">
-        <span class="text-2xl text-zinc-800 font-bold line-through">我才不是什么萝莉控</span>
+        class="bg-white w-[450px] max-w-[86vw] h-[230px] rounded-2xl bg-opacity-35 flex items-center justify-center flex-col"
+      >
+        <span class="text-2xl text-zinc-800 font-bold line-through"
+          >我才不是什么萝莉控</span
+        >
 
         <hr class="w-5/6 border-gray-900 m-5" />
 
         <ClientOnly>
-          <span class="text-xl text-pink-500 font-bold mb-2" v-if="isBirthday">🎂 小花生日快乐 🎂</span>
+          <span class="text-xl text-pink-500 font-bold mb-2" v-if="isBirthday"
+            >🎂 小花生日快乐 🎂</span
+          >
         </ClientOnly>
 
-        <span v-for="[name, link] of Object.entries(links)" class="text-base text-zinc-700">
+        <span
+          v-for="[name, link] of Object.entries(links)"
+          class="text-base text-zinc-700"
+        >
           <a :href="link">{{ name }}</a>
         </span>
       </div>
     </main>
 
-    <footer>
-      <span class="footer fixed bottom-4 text-lg text-pink-400 font-base text-center" v-html="footer"></span>
+    <footer class="fixed bottom-4">
+      <span class="text-lg text-pink-400 font-base" v-html="footer"></span>
     </footer>
   </div>
 
   <div class="music absolute top-1 right-1">
-    <iframe frameborder="no" width="330" height="86"
-      src="//music.163.com/outchain/player?type=2&id=1348722587&auto=0&height=66"></iframe>
+    <iframe
+      frameborder="no"
+      width="330"
+      height="86"
+      src="//music.163.com/outchain/player?type=2&id=1348722587&auto=0&height=66"
+    ></iframe>
   </div>
 </template>
 
@@ -46,14 +60,12 @@ useScriptNpm({
   version: "0.12.0",
 });
 
-const checkBirthday = () => {
+const checkBirthday = (month: number, day: number) => {
   const today = new Date();
-  const targetMonth = 3;
-  const targetDay = 7;
-  return today.getMonth() + 1 === targetMonth && today.getDate() === targetDay;
+  return today.getMonth() + 1 === month && today.getDate() === day;
 };
 
-const isBirthday = checkBirthday();
+const isBirthday = checkBirthday(3, 7);
 
 onMounted(() => {
   if (isBirthday) {

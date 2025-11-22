@@ -10,16 +10,16 @@
         "postinstall": "nuxt prepare"
     },
     "dependencies": {
-        "@nuxt/scripts": "^0.11.6",
+        "@nuxt/scripts": "^0.11.13",
         "js-confetti": "^0.12.0",
-        "nuxt": "^3.17.1",
+        "nuxt": "^4.2.1",
         "vue": "latest",
         "vue-router": "latest"
     },
     "devDependencies": {
         "@nuxtjs/tailwindcss": "^6.14.0",
-        "sass": "^1.87.0",
-        "sass-loader": "^16.0.5"
+        "sass": "^1.94.2",
+        "sass-loader": "^16.0.6"
     },
-    "packageManager": "pnpm@10.7.0"
+    "packageManager": "pnpm@10.23.0+sha512.21c4e5698002ade97e4efe8b8b4a89a8de3c85a37919f957e7a0f30f38fbc5bbdd05980ffe29179b2fb6e6e691242e098d945d1601772cad0fef5fb6411e2a4b"
 }
