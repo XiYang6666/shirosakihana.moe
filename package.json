@@ -10,6 +10,7 @@
         "postinstall": "nuxt prepare"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-free": "^7.1.0",
         "@nuxt/scripts": "^0.11.13",
         "js-confetti": "^0.12.0",
         "nuxt": "^4.2.1",

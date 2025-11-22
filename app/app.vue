@@ -4,7 +4,7 @@
   >
     <main>
       <div
-        class="bg-white w-[450px] max-w-[86vw] h-[230px] rounded-2xl bg-opacity-35 flex items-center justify-center flex-col"
+        class="bg-zinc-200 w-[450px] max-w-[86vw] h-[230px] rounded-2xl bg-opacity-35 flex items-center justify-center flex-col"
       >
         <span class="text-2xl text-zinc-800 font-bold line-through"
           >我才不是什么萝莉控</span
@@ -40,9 +40,14 @@
       src="//music.163.com/outchain/player?type=2&id=1348722587&auto=0&height=66"
     ></iframe>
   </div>
+
+  <FlushBackgroundButton
+    class="absolute right-1 bottom-1"
+  ></FlushBackgroundButton>
 </template>
 
 <script lang="ts" setup>
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import JSConfetti from "js-confetti";
 
 useHead({
@@ -68,6 +73,7 @@ const checkBirthday = (month: number, day: number) => {
 const isBirthday = checkBirthday(3, 7);
 
 onMounted(() => {
+  setRandomBg();
   if (isBirthday) {
     const confetti = new JSConfetti();
     confetti.addConfetti();

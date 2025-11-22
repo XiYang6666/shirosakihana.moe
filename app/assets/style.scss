@@ -9,10 +9,10 @@ body {
   @apply bg-zinc-800;
   @apply bg-center;
   @apply bg-fixed;
-  @media only screen and (orientation: landscape) {
+  /* @media only screen and (orientation: landscape) {
     background-image: url("/api/randomBg");
   }
   @media only screen and (orientation: portrait) {
     background-image: url("/api/randomBg?mobile");
-  }
+  } */
 }

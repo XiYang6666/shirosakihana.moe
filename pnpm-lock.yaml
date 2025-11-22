@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@fortawesome/fontawesome-free':
+        specifier: ^7.1.0
+        version: 7.1.0
       '@nuxt/scripts':
         specifier: ^0.11.13
         version: 0.11.13(@netlify/blobs@9.0.0)(@unhead/vue@2.0.19(vue@3.5.24(typescript@5.8.3)))(db0@0.3.4)(ioredis@5.8.2)(magicast@0.5.1)(typescript@5.8.3)(vue@3.5.24(typescript@5.8.3))
@@ -346,6 +349,10 @@ packages:
 
   '@fastify/busboy@3.2.0':
     resolution: {integrity: sha512-m9FVDXU3GT2ITSe0UaMA5rU3QkfC/UXtCU8y0gSN/GugTqtVldOBWIB5V6V3sbmenVZUIpU6f+mPEO2+m5iTaA==}
+
+  '@fortawesome/fontawesome-free@7.1.0':
+    resolution: {integrity: sha512-+WxNld5ZCJHvPQCr/GnzCTVREyStrAJjisUPtUxG5ngDA8TMlPnKp6dddlTpai4+1GNmltAeuk1hJEkBohwZYA==}
+    engines: {node: '>=6'}
 
   '@ioredis/commands@1.4.0':
     resolution: {integrity: sha512-aFT2yemJJo+TZCmieA7qnYGQooOS7QfNmYrzGtsYd3g9j5iDP8AimYYAesf79ohjbLG12XxC4nG5DyEnC88AsQ==}
@@ -4093,6 +4100,8 @@ snapshots:
 
   '@fastify/busboy@3.2.0':
     optional: true
+
+  '@fortawesome/fontawesome-free@7.1.0': {}
 
   '@ioredis/commands@1.4.0': {}
 
