@@ -3,16 +3,9 @@
 @tailwind utilities;
 
 body {
-  @apply overflow-hidden;
   @apply select-none;
   @apply bg-cover;
   @apply bg-zinc-800;
   @apply bg-center;
   @apply bg-fixed;
-  /* @media only screen and (orientation: landscape) {
-    background-image: url("/api/randomBg");
-  }
-  @media only screen and (orientation: portrait) {
-    background-image: url("/api/randomBg?mobile");
-  } */
 }

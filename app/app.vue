@@ -25,6 +25,6 @@ onMounted(() => {
       setRandomBg();
     }
   });
-  window.addEventListener("orientationchange", setRandomBg);
+  // window.addEventListener("orientationchange", setRandomBg);
 });
 </script>

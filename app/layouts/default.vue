@@ -1,8 +1,7 @@
 <template>
-  <div class="w-dvw overflow-hidden flex justify-center flex-col">
+  <div class="w-dvw overflow-hidden flex items-center flex-col">
     <slot />
-
-    <footer class="self-center">
+    <footer class="text-center">
       <span class="text-lg text-pink-400 font-base" v-html="footer"></span>
     </footer>
   </div>

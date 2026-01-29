@@ -1,6 +1,10 @@
 <template>
   <ClientOnly>
-    <Waline :serverURL="serverURL" :path="path" />
+    <Waline
+      :serverURL="serverURL"
+      :turnstileKey="walineTurnstileKey"
+      :path="path"
+    />
   </ClientOnly>
 </template>
 
@@ -11,6 +15,8 @@ import "@waline/client/waline.css";
 const config = useRuntimeConfig();
 
 const serverURL = config.public.walineServerUrl;
+const walineTurnstileKey = config.public.walineTurnstileKey;
+
 const path = computed(() => useRoute().path);
 
 console.debug(path);
