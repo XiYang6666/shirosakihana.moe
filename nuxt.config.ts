@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       walineServerUrl: "https://shirosakihana.moe/waline-api/",
-      walineTurnstileKey: "0x4AAAAAACVYAYnvIgenA4luSlnjoHwyZL0",
+      walineTurnstileKey: "0x4AAAAAACVYAdLHyHTKSbgQ",
       links: {
         留言板: "/guestbook",
         随机小花图片: "https://shirosakihana.moe/api/randomHana",

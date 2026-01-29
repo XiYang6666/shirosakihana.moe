@@ -2,8 +2,9 @@
   <ClientOnly>
     <Waline
       :serverURL="serverURL"
-      :turnstileKey="walineTurnstileKey"
+      :turnstileKey="turnstileKey"
       :path="path"
+      login="disable"
     />
   </ClientOnly>
 </template>
@@ -15,7 +16,7 @@ import "@waline/client/waline.css";
 const config = useRuntimeConfig();
 
 const serverURL = config.public.walineServerUrl;
-const walineTurnstileKey = config.public.walineTurnstileKey;
+const turnstileKey = config.public.walineTurnstileKey;
 
 const path = computed(() => useRoute().path);
 
