@@ -14,6 +14,11 @@ export default defineNuxtConfig({
       ],
     },
   },
+  vite: {
+    ssr: {
+      noExternal: ['vue-toastification']
+    }
+  },
   runtimeConfig: {
     public: {
       walineServerUrl: "https://shirosakihana.moe/waline-api/",
