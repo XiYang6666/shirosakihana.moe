@@ -43,22 +43,15 @@ import JSConfetti from "js-confetti";
 definePageMeta({
   layout: "home",
 });
-
-useHead({
+useSeoMeta({
   title: "小花可爱 n(*≧▽≦*)n",
-  link: [
-    {
-      rel: "shortcut icon",
-      href: "/favicon.ico",
-    },
-  ],
+  description: "一个简单的白咲花粉丝站",
 });
 useScriptNpm({
   packageName: "js-confetti",
   file: "dist/js-confetti.browser.js",
   version: "0.12.0",
 });
-
 onMounted(() => {
   if (checkBirthday()) {
     const confetti = new JSConfetti();

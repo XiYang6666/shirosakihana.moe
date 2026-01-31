@@ -4,7 +4,16 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxtjs/tailwindcss", "@nuxt/scripts"],
   css: ["assets/style.scss"],
-
+  app: {
+    head: {
+      link: [
+        {
+          rel: "icon",
+          href: "/favicon.ico",
+        },
+      ],
+    },
+  },
   runtimeConfig: {
     public: {
       walineServerUrl: "https://shirosakihana.moe/waline-api/",

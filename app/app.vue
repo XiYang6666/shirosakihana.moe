@@ -3,7 +3,7 @@
     <NuxtPage></NuxtPage>
   </NuxtLayout>
   <RefreshBackgroundButton
-    class="fixed right-1 bottom-1"
+    class="fixed right-2 bottom-2"
   ></RefreshBackgroundButton>
 </template>
 

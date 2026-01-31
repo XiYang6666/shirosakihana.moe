@@ -9,4 +9,9 @@
     <WalineComponent class="w-10/12"></WalineComponent>
   </div>
 </template>
-<script setup lang="ts"></script>
+
+<script setup lang="ts">
+useSeoMeta({
+  title: "小花可爱 n(*≧▽≦*)n | 留言板",
+});
+</script>
