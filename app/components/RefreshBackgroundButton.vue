@@ -19,6 +19,37 @@
   </div>
 </template>
 
+<script setup lang="ts">
+import { useToast } from "vue-toastification";
+import "vue-toastification/dist/index.css";
+
+let isTransitioning = false;
+
+function setRandomBg() {
+  if (isTransitioning) {
+    const toast = useToast();
+    toast.info("点的太快啦!", { timeout: 1500 });
+    return;
+  }
+  isTransitioning = true;
+  const isPortrait = window.matchMedia("(orientation: portrait)").matches;
+  const url = isPortrait
+    ? `/api/randomBg?mobile&ts=${Date.now()}`
+    : `/api/randomBg?ts=${Date.now()}`;
+
+  document.body.style.setProperty("--after-background", `url('${url}')`);
+  document.body.classList.add("bg-in");
+  document.body.style.setProperty("--after-opacity", "1");
+
+  setTimeout(() => {
+    document.body.style.backgroundImage = `url('${url}')`;
+    document.body.classList.remove("bg-in");
+    document.body.style.setProperty("--after-opacity", "0");
+    isTransitioning = false;
+  }, 1000);
+}
+</script>
+
 <style lang="scss">
 .flush-bg-button:hover .tooltip {
   @apply visible bg-opacity-35 opacity-100 translate-x-0;

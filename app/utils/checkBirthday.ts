@@ -1,4 +1,4 @@
-export default function checkBirthday() {
+export default function () {
   const config = useRuntimeConfig();
   const today = new Date();
   const birthday: [number, number] = config.public.birthday

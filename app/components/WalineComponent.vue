@@ -19,6 +19,4 @@ const serverURL = config.public.walineServerUrl;
 const turnstileKey = config.public.walineTurnstileKey;
 
 const path = computed(() => useRoute().path);
-
-console.debug(path);
 </script>

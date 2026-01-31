@@ -1,4 +1,4 @@
-export default function setRandomBg() {
+export default function () {
   const isPortrait = window.matchMedia("(orientation: portrait)").matches;
   const url = isPortrait
     ? `/api/randomBg?mobile&ts=${Date.now()}`

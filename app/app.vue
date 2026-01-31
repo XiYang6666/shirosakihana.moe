@@ -10,19 +10,21 @@
 <script lang="ts" setup>
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
+const bgMode = useBgMode();
+
 function getOrientation() {
   return window.innerWidth > window.innerHeight ? "landscape" : "portrait";
 }
 
 onMounted(() => {
-  setRandomBg();
+  setupBg();
   let lastOrientation = getOrientation();
 
   window.addEventListener("resize", () => {
     const currentOrientation = getOrientation();
     if (currentOrientation !== lastOrientation) {
       lastOrientation = currentOrientation;
-      setRandomBg();
+      setupBg();
     }
   });
   // window.addEventListener("orientationchange", setRandomBg);

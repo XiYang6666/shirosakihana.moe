@@ -15,7 +15,7 @@ const config = useRuntimeConfig();
 const footer = config.public.footer;
 </script>
 
-<style lang="postcss">
+<style module>
 body {
   @apply overflow-hidden;
 }

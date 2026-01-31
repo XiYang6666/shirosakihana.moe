@@ -1,7 +1,7 @@
 <template>
   <main>
     <div
-      class="bg-zinc-200 w-[450px] max-w-[86vw] h-[230px] rounded-2xl bg-opacity-35 flex items-center justify-center flex-col"
+      class="bg-zinc-400 w-[450px] max-w-[86vw] h-[230px] rounded-2xl bg-opacity-35 flex items-center justify-center flex-col"
     >
       <span class="text-2xl text-zinc-800 font-bold line-through"
         >我才不是什么萝莉控</span
