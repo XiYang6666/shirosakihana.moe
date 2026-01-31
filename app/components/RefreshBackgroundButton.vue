@@ -24,10 +24,10 @@ import { useToast } from "vue-toastification";
 import "vue-toastification/dist/index.css";
 
 let isTransitioning = false;
+const toast = useToast();
 
 function setRandomBg() {
   if (isTransitioning) {
-    const toast = useToast();
     toast.info("点的太快啦!", { timeout: 1500 });
     return;
   }
