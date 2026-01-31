@@ -45,7 +45,7 @@ definePageMeta({
 });
 useSeoMeta({
   title: "小花可爱 n(*≧▽≦*)n",
-  description: "一个简单的白咲花粉丝站",
+  description: "一个简单的白咲花粉丝站 / A simple Hana Shirasaki fan site",
 });
 useScriptNpm({
   packageName: "js-confetti",
