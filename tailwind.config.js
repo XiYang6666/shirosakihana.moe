@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
     darkMode: "media",
-    content: ["{srcDir}/**/*.{vue,scss}"],
+    content: ["srcDir/**/*.{vue,scss}"],
     theme: {
         extend: {
             typography: ({ theme }) => ({
