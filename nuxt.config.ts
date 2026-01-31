@@ -14,4 +14,9 @@ export default defineNuxtConfig({
       ],
     },
   },
+  vite: {
+    ssr: {
+      noExternal: ["vue-toastification"],
+    },
+  },
 });
