@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-cover bg-center bg-fixed;
+  @apply overflow-x-hidden;
+  @apply bg-zinc-200 dark:bg-zinc-800;
+
+  @apply scrollbar-w-2;
+  @apply scrollbar-thumb-rounded-full;
+  @apply scrollbar-thumb-zinc-300;
+  @apply dark:scrollbar-thumb-zinc-700;
+  @apply scrollbar-track-zinc-200;
+  @apply dark:scrollbar-track-zinc-800;
+}

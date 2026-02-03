@@ -1,0 +1,25 @@
+{
+  "name": "@apps/mirror",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "github-slugger": "^2.0.0",
+    "highlight.js": "^11.11.1",
+    "markdown-it": "^14.1.0",
+    "markdown-it-anchor": "^9.2.0",
+    "nuxt": "^4.3.0",
+    "vue": "^3.5.27",
+    "vue-router": "^4.6.4",
+    "@packages/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/markdown-it": "^14.1.2"
+  }
+}
