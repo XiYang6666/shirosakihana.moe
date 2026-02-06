@@ -4,4 +4,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["assets/main.scss", "assets/highlight.scss", "assets/markdown.scss"],
   extends: ["../../packages/shared"],
+  nitro: {
+    prerender: {
+      routes: ["/"],
+    },
+  },
 });
