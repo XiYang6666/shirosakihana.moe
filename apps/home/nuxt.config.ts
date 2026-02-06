@@ -5,9 +5,12 @@ export default defineNuxtConfig({
   modules: ["@nuxt/scripts"],
   css: ["assets/main.scss"],
   extends: ["../../packages/shared"],
-  nitro: {
-    prerender: {
-      routes: ["/", "/guestbook"],
+  routeRules: {
+    "/": {
+      swr: true,
+    },
+    "/guestbook": {
+      swr: true,
     },
   },
   runtimeConfig: {

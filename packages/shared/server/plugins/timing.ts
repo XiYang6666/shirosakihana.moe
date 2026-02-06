@@ -1,7 +1,15 @@
+import type { H3Event } from "h3";
+
 declare type Timing = {
   start: number;
   marks: { name: string; time: number }[];
 };
+
+function addMark(event: H3Event, name: string) {
+  const timing: Timing | undefined = event.context._timing;
+  if (!timing) return;
+  timing.marks.push({ name, time: performance.now() });
+}
 
 export default defineNitroPlugin((app) => {
   app.hooks.hook("request", (event) => {
@@ -10,19 +18,12 @@ export default defineNitroPlugin((app) => {
       marks: [],
     };
   });
-  app.hooks.hook("render:before", ({ event }) => {
-    event.context._timing.marks.push({
-      name: "prepare",
-      time: performance.now(),
-    });
-  });
-  app.hooks.hook("render:response", (response, { event }) => {
-    event.context._timing.marks.push({
-      name: "render",
-      time: performance.now(),
-    });
-  });
+  app.hooks.hook("render:before", ({ event }) => addMark(event, "prepare"));
+  app.hooks.hook("render:response", (response, { event }) =>
+    addMark(event, "render"),
+  );
   app.hooks.hook("beforeResponse", (event) => {
+    addMark(event, "finalize");
     const timing: Timing | undefined = event.context._timing;
     if (!timing) return;
 
