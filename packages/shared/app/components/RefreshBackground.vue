@@ -46,6 +46,7 @@ function setRandomBg() {
     isTransitioning = true;
     const currentTs = getCurrentBgTs(props.isSource);
     const url = getBgUrl(props.isSource, currentTs);
+    console.log(url);
 
     const bgElement = getBgElement();
 

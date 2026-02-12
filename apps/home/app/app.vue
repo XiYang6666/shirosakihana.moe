@@ -14,14 +14,14 @@ function getOrientation() {
 }
 
 onMounted(() => {
-  setupBg();
+  setupBg(true);
   let lastOrientation = getOrientation();
 
   window.addEventListener("resize", () => {
     const currentOrientation = getOrientation();
     if (currentOrientation !== lastOrientation) {
       lastOrientation = currentOrientation;
-      setupBg();
+      setupBg(true);
     }
   });
   // window.addEventListener("orientationchange", setRandomBg);

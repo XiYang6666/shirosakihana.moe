@@ -16,7 +16,8 @@
     "node-cache": "^5.1.2",
     "nuxt": "^4.3.0",
     "vue": "latest",
-    "vue-router": "latest"
+    "vue-router": "latest",
+    "vue-toastification": "2.0.0-rc.5"
   },
   "devDependencies": {
     "@waline/client": "^3.8.0"

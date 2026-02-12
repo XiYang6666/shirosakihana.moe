@@ -1,29 +1,59 @@
 <template>
   <main>
     <div
-      class="bg-zinc-400 w-[450px] max-w-[86vw] h-[230px] rounded-2xl bg-opacity-35 flex items-center justify-center flex-col"
+      class="bg-zinc-100 w-[30rem] p-6 rounded-[3rem] bg-opacity-30 border-2 border-zinc-100 shadow flex items-center justify-center flex-col text-zinc-800"
     >
-      <span class="text-2xl text-zinc-800 font-bold line-through"
-        >我才不是什么萝莉控</span
-      >
-
-      <hr class="w-5/6 border-gray-900 m-5" />
-
-      <ClientOnly>
-        <!-- 只在浏览器检查,避免服务器客户端时区不同步的问题 -->
-        <span
-          class="text-xl text-pink-500 font-bold mb-2"
-          v-if="checkBirthday()"
-          >🎂 小花生日快乐 🎂</span
+      <nav class="flex flex-row gap-4 mb-4">
+        <a
+          v-for="[name, href] in Object.entries(links)"
+          :href="href"
+          class="text-lg font-bold text-center bg-zinc-100 hover:bg-zinc-300 transition-colors duration-200 bg-opacity-50 w-20 rounded-full border-zinc-400 border-2"
         >
-      </ClientOnly>
+          {{ name }}
+        </a>
+      </nav>
 
-      <span
-        v-for="[name, link] of Object.entries(links)"
-        class="text-base text-zinc-700"
+      <img
+        src="/avatar.webp"
+        class="w-32 h-32 rounded-full border-zinc-300 border-4"
+      />
+
+      <h1 class="text-2xl text-center font-bold mt-6">
+        <ruby> 白咲<rt>しろさき</rt> 花<rt>はな</rt> </ruby>
+      </h1>
+
+      <h1 class="text-sm text-center uppercase tracking-widest mb-4">
+        Shirosaki Hana
+      </h1>
+
+      <div
+        class="flex flex-col p-4 mb-4 justify-center w-4/5 rounded-lg bg-zinc-100 bg-opacity-40"
       >
-        <a :href="link">{{ name }}</a>
-      </span>
+        <span class="font-bold">基本资料</span>
+        <table>
+          <thead>
+            <tr>
+              <td class="w-10"></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>生日:</td>
+              <td>3月7日</td>
+            </tr>
+            <tr>
+              <td>身高:</td>
+              <td>142.3cm</td>
+            </tr>
+            <tr>
+              <td>血型:</td>
+              <td>A型</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <span class="text-xl">小花世界第一可爱!</span>
     </div>
   </main>
 
@@ -39,6 +69,12 @@
 
 <script lang="ts" setup>
 import JSConfetti from "js-confetti";
+
+const links = {
+  关于: "/about",
+  画廊: "/api/randomHana",
+  留言: "/guestbook",
+};
 
 definePageMeta({
   layout: "home",
@@ -58,7 +94,6 @@ onMounted(() => {
     confetti.addConfetti();
   }
 });
-
-const config = useRuntimeConfig();
-const links = config.public.links;
 </script>
+
+<style></style>
