@@ -17,8 +17,7 @@
       ></div>
     </div>
   </NuxtLayout>
-  <RefreshBackgroundButton :support-dark="true" />
-  <SafariCompatBg />
+  <RefreshBackground :support-dark="true" />
 </template>
 
 <script setup lang="ts">
@@ -29,7 +28,7 @@ useSeoMeta({
   description: "一个简单的镜像站 / A simple mirror site",
 });
 onMounted(() => {
-    setupBg();
+  setupBg();
 });
 
 const { data: content } = useAsyncData<string>(async () => {

@@ -1,4 +1,6 @@
 <template>
+  <div ref="bgRef" id="safari-bg" />
+
   <div class="fixed right-2 bottom-2">
     <button
       class="flush-bg-button relative bg-zinc-200 bg-opacity-35 dark:bg-opacity-60 rounded-full w-12 h-12 hover:bg-opacity-80 transition-colors duration-700 ease-in-out transform-gpu"
@@ -45,17 +47,32 @@ function setRandomBg() {
     const currentTs = getCurrentBgTs(props.isSource);
     const url = getBgUrl(props.isSource, currentTs);
 
-    await new Promise((resolve) => setTimeout(resolve, 100));
-    getBgElement().style.setProperty("--after-background", `url('${url}')`);
-    getBgElement().classList.add("bg-in");
-    getBgElement().style.setProperty("--after-opacity", "1");
+    const bgElement = getBgElement();
+
+    // preload image
+    await new Promise<void>((resolve, reject) => {
+      const img = new Image();
+      img.src = url;
+      img.onload = () => resolve();
+      img.onerror = () => reject(createError("图片加载失败"));
+    });
+
+    bgElement.style.setProperty("--after-background", `url('${url}')`);
+    bgElement.classList.add("bg-in");
+    bgElement.style.setProperty("--after-opacity", "1");
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    getBgElement().style.backgroundImage = `url('${url}')`;
-    getBgElement().classList.remove("bg-in");
-    getBgElement().style.setProperty("--after-opacity", "0");
+    bgElement.style.backgroundImage = `url('${url}')`;
+    bgElement.classList.remove("bg-in");
+    bgElement.style.setProperty("--after-opacity", "0");
     isTransitioning = false;
   })();
 }
+
+onMounted(() => {
+  if (isSafari()) {
+    getBgElement().style.setProperty("display", "block");
+  }
+});
 </script>
 
 <style lang="scss">
@@ -73,6 +90,28 @@ body::after {
   opacity: var(--after-opacity, 0);
 }
 body::after.bg-in {
+  @apply transition-opacity duration-1000 ease-in-out;
+}
+
+#safari-bg {
+  @apply bg-cover bg-center bg-fixed;
+  @apply fixed top-0 h-dvh left-0 right-0;
+  @apply -z-10;
+  transform: translateZ(0);
+  display: none;
+}
+
+#safari-bg::after {
+  content: "";
+  @apply pointer-events-none;
+  @apply bg-cover bg-center bg-fixed;
+  @apply fixed top-0 left-0 right-0 bottom-0;
+  @apply -z-10;
+  background-image: var(--after-background);
+  opacity: var(--after-opacity, 0);
+  transform: translateZ(0);
+}
+#safari-bg::after.bg-in {
   @apply transition-opacity duration-1000 ease-in-out;
 }
 </style>

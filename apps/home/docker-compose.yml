@@ -1,8 +1,0 @@
-services:
-    shirosakihana-moe:
-        build: .
-        container_name: shirosakihana-moe
-        ports:
-            - 3000:3000
-        env_file:
-            - .env

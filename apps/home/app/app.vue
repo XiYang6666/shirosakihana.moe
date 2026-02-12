@@ -3,8 +3,7 @@
   <NuxtLayout>
     <NuxtPage></NuxtPage>
   </NuxtLayout>
-  <RefreshBackgroundButton :is-source="true" />
-  <SafariCompatBg />
+  <RefreshBackground :is-source="true" />
 </template>
 
 <script lang="ts" setup>
