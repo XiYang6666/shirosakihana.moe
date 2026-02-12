@@ -32,7 +32,7 @@
       frameborder="no"
       width="330"
       height="86"
-      src="//music.163.com/outchain/player?type=2&id=1348722587&auto=0&height=66"
+      src="https://music.163.com/outchain/player?type=2&id=1348722587&auto=0&height=66"
     ></iframe>
   </div>
 </template>

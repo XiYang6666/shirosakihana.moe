@@ -25,8 +25,6 @@
 <script setup lang="ts">
 import { useToast } from "vue-toastification";
 import "vue-toastification/dist/index.css";
-import getBgUrl from "~/utils/getBgUrl";
-import getCurrentBgTs from "~/utils/getCurrentBgTs";
 
 const props = defineProps({
   isSource: Boolean,
@@ -48,13 +46,13 @@ function setRandomBg() {
     const url = getBgUrl(props.isSource, currentTs);
 
     await new Promise((resolve) => setTimeout(resolve, 100));
-    document.body.style.setProperty("--after-background", `url('${url}')`);
-    document.body.classList.add("bg-in");
-    document.body.style.setProperty("--after-opacity", "1");
+    getBgElement().style.setProperty("--after-background", `url('${url}')`);
+    getBgElement().classList.add("bg-in");
+    getBgElement().style.setProperty("--after-opacity", "1");
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    document.body.style.backgroundImage = `url('${url}')`;
-    document.body.classList.remove("bg-in");
-    document.body.style.setProperty("--after-opacity", "0");
+    getBgElement().style.backgroundImage = `url('${url}')`;
+    getBgElement().classList.remove("bg-in");
+    getBgElement().style.setProperty("--after-opacity", "0");
     isTransitioning = false;
   })();
 }

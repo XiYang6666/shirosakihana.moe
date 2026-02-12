@@ -3,7 +3,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "dev": "nuxt dev"
   },
   "dependencies": {
     "nuxt": "^4.3.0",

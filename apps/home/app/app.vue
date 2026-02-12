@@ -4,12 +4,11 @@
     <NuxtPage></NuxtPage>
   </NuxtLayout>
   <RefreshBackgroundButton :is-source="true" />
+  <SafariCompatBg />
 </template>
 
 <script lang="ts" setup>
 import "@fortawesome/fontawesome-free/css/all.min.css";
-
-const bgMode = useBgMode();
 
 function getOrientation() {
   return window.innerWidth > window.innerHeight ? "landscape" : "portrait";

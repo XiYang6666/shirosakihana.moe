@@ -1,25 +1,24 @@
 <template>
-  <div>
-    <NuxtRouteAnnouncer />
-    <header>
-      <Header></Header>
-    </header>
+  <NuxtRouteAnnouncer />
+  <header>
+    <Header></Header>
+  </header>
 
-    <NuxtLayout>
-      <!-- 占位符 -->
-      <div class="w-full h-16"></div>
-      <!-- 内容 -->
+  <NuxtLayout>
+    <!-- 占位符 -->
+    <div class="w-full h-16"></div>
+    <!-- 内容 -->
+    <div
+      class="w-10/12 m-8 p-8 bg-zinc-200 dark:bg-zinc-950 bg-opacity-60 dark:bg-opacity-50 rounded-xl"
+    >
       <div
-        class="w-10/12 m-8 p-8 bg-zinc-200 dark:bg-zinc-950 bg-opacity-60 dark:bg-opacity-50 rounded-xl"
-      >
-        <div
-          class="prose max-w-full dark:prose-invert text-zinc-800 dark:text-zinc-200"
-          v-html="$md.render(content ?? 'Error: Unknown')"
-        ></div>
-      </div>
-    </NuxtLayout>
-    <RefreshBackgroundButton :support-dark="true" />
-  </div>
+        class="prose max-w-full dark:prose-invert text-zinc-800 dark:text-zinc-200"
+        v-html="$md.render(content ?? 'Error: Unknown')"
+      ></div>
+    </div>
+  </NuxtLayout>
+  <RefreshBackgroundButton :support-dark="true" />
+  <SafariCompatBg />
 </template>
 
 <script setup lang="ts">
@@ -30,7 +29,7 @@ useSeoMeta({
   description: "一个简单的镜像站 / A simple mirror site",
 });
 onMounted(() => {
-  setupBg();
+    setupBg();
 });
 
 const { data: content } = useAsyncData<string>(async () => {
