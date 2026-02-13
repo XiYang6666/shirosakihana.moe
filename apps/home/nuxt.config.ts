@@ -22,7 +22,6 @@ export default defineNuxtConfig({
       walineTurnstileKey: "0x4AAAAAACVYAdLHyHTKSbgQ",
       footer:
         '<a href="https://icp.gov.moe/?keyword=20250307" target="_blank">萌ICP备20250307号</a>',
-      birthday: "3.7",
     },
   },
 });

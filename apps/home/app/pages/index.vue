@@ -18,12 +18,18 @@
     />
 
     <h1 class="text-2xl text-center font-bold mt-6">
-      <ruby> 白咲<rt>しろさき</rt> 花<rt>はな</rt> </ruby>
+      <ruby>白咲<rt>しろさき</rt> 花<rt>はな</rt></ruby>
     </h1>
 
     <h1 class="text-sm text-center uppercase tracking-widest mb-4">
       Shirosaki Hana
     </h1>
+
+    <ClientOnly>
+      <span v-if="checkBirthday()" class="text-xl text-pink-500 font-bold mb-4">
+        🎂 小花生日快乐 🎂
+      </span>
+    </ClientOnly>
 
     <div
       class="flex flex-col p-4 mb-4 justify-center w-4/5 rounded-lg bg-zinc-100 bg-opacity-40"
