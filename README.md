@@ -2,6 +2,12 @@
 
 一个简单的白咲花粉丝站 / A simple Hana Shirasaki fan site
 
-！[PC](docs/pc.png)
+## 预览
 
-！[Mobile](docs/mobile.png)
+### 电脑端
+
+![PC](docs/pc.png)
+
+### 手机端
+
+![Mobile](docs/mobile.png)
