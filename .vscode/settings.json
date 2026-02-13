@@ -1,15 +1,21 @@
 {
-    "files.associations": {
-        "*.vue": "vue",
-        "*.css": "tailwindcss",
-        "*.scss": "tailwindcss"
-    },
-    "tailwindCSS.includeLanguages": {
-        "vue": "html",
-        "css": "tailwindcss",
-        "scss": "tailwindcss"
-    },
-    "tailwindCSS.validate": true,
-    "css.validate": false,
-    "scss.validate": false
+  "files.associations": {
+    "*.vue": "vue",
+    "*.css": "tailwindcss",
+    "*.scss": "tailwindcss"
+  },
+  "tailwindCSS.includeLanguages": {
+    "vue": "html",
+    "css": "tailwindcss",
+    "scss": "tailwindcss"
+  },
+  "tailwindCSS.validate": true,
+  "css.validate": false,
+  "scss.validate": false,
+  "cSpell.words": [
+    "Bilibili",
+    "Gelbooru",
+    "Shirosaki",
+    "toastification"
+  ]
 }

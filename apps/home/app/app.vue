@@ -3,29 +3,11 @@
   <NuxtLayout>
     <NuxtPage></NuxtPage>
   </NuxtLayout>
-  <RefreshBackground :is-source="true" />
+  <BackgroundTransition :is-source="true" />
 </template>
 
 <script lang="ts" setup>
 import "@fortawesome/fontawesome-free/css/all.min.css";
-
-function getOrientation() {
-  return window.innerWidth > window.innerHeight ? "landscape" : "portrait";
-}
-
-onMounted(() => {
-  setupBg(true);
-  let lastOrientation = getOrientation();
-
-  window.addEventListener("resize", () => {
-    const currentOrientation = getOrientation();
-    if (currentOrientation !== lastOrientation) {
-      lastOrientation = currentOrientation;
-      setupBg(true);
-    }
-  });
-  // window.addEventListener("orientationchange", setRandomBg);
-});
 </script>
 
 <style>

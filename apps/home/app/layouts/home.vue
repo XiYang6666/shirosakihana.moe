@@ -1,6 +1,6 @@
 <template>
   <div
-    class="content w-dvw h-dvh overflow-hidden flex items-center justify-center flex-col"
+    class="content w-dvw h-dvh overflow-hidden flex items-center justify-center flex-col mx-auto"
   >
     <slot />
 

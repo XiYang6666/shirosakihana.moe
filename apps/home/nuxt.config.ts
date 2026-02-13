@@ -9,6 +9,9 @@ export default defineNuxtConfig({
     "/": {
       swr: true,
     },
+    "/about": {
+      swr: true,
+    },
     "/guestbook": {
       swr: true,
     },
