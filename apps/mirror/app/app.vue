@@ -17,7 +17,7 @@
       ></div>
     </div>
   </NuxtLayout>
-  <BackgroundTransition :is-source="true" />
+  <BackgroundTransition />
 </template>
 
 <script setup lang="ts">
