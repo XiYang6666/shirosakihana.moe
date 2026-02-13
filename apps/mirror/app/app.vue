@@ -21,8 +21,6 @@
 </template>
 
 <script setup lang="ts">
-import "@fortawesome/fontawesome-free/css/all.min.css";
-
 useSeoMeta({
   title: "HanaMirror",
   description: "一个简单的镜像站 / A simple mirror site",
