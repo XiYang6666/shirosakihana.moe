@@ -4,8 +4,9 @@
   >
     <nav class="flex flex-row gap-3 mb-4">
       <NuxtLink
-        v-for="[name, href] in Object.entries(links)"
-        :href="href"
+        v-for="[name, { url, external }] in Object.entries(links)"
+        :href="url"
+        :external="external"
         class="text-lg font-bold text-center bg-zinc-100 hover:bg-zinc-300 transition-colors duration-200 bg-opacity-50 w-20 rounded-full border-zinc-400 border-2"
       >
         {{ name }}
@@ -75,10 +76,10 @@
 import JSConfetti from "js-confetti";
 
 const links = {
-  关于: "/about",
-  画廊: "/api/randomHana",
-  留言: "/guestbook",
-  镜像: "https://mirror.shirosakihana.moe",
+  关于: { url: "/about", external: false },
+  画廊: { url: "/api/randomHana", external: true },
+  留言: { url: "/guestbook", external: false },
+  镜像: { url: "https://mirror.shirosakihana.moe", external: false },
 };
 
 definePageMeta({
