@@ -2,7 +2,12 @@
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
-  css: ["assets/main.scss", "assets/highlight.scss", "assets/markdown.scss"],
+  css: [
+    "assets/main.scss",
+    "assets/highlight.scss",
+    "assets/markdown.scss",
+    "assets/text-shadow.scss",
+  ],
   extends: ["../../packages/shared"],
   routeRules: {
     "/": {
