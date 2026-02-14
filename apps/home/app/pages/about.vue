@@ -11,9 +11,9 @@
 
     <p class="text-zinc-800">
       一个简单的白咲花粉丝站，由
-      <a href="https://github.com/XiYang6666" class="underline font-bold">
+      <NuxtLink href="https://github.com/XiYang6666" class="underline font-bold">
         @XiYang6666
-      </a>
+      </NuxtLink>
       运营
     </p>
 
@@ -21,15 +21,15 @@
     <ul class="mt-2 list-disc pl-6">
       <li>番剧截图</li>
       <li>
-        <a
+        <NuxtLink
           class="underline"
           href="https://gelbooru.com/index.php?page=post&s=list&tags=shirosaki_hana"
-          >Gelbooru</a
+          >Gelbooru</NuxtLink
         >
       </li>
       <li>
-        <a class="underline" href="https://space.bilibili.com/457053240"
-          >Bilibili(@帕喵ネコ)</a
+        <NuxtLink class="underline" href="https://space.bilibili.com/457053240"
+          >Bilibili(@帕喵ネコ)</NuxtLink
         >
       </li>
     </ul>
