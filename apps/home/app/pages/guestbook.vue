@@ -3,9 +3,9 @@
     class="w-10/12 m-8 p-8bg-zinc-100 bg-zinc-100 bg-opacity-30 shadow flex flex-col rounded-xl items-center"
   >
     <h1 class="text-zinc-800 text-3xl font-bold text-center">留言板</h1>
-    <a href="/" class="mt-3 mb-1 text-zinc-800 text-base text-center">
+    <NuxtLink href="/" class="mt-3 mb-1 text-zinc-800 text-base text-center">
       返回主页
-    </a>
+    </NuxtLink>
     <WalineComponent class="w-10/12"></WalineComponent>
     <DevOnly>
       <p v-for="i of 100">awa</p>

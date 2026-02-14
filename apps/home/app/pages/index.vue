@@ -3,13 +3,13 @@
     class="bg-zinc-100 w-[30rem] max-w-[95%] p-6 rounded-[3rem] bg-opacity-30 border-2 border-zinc-100 shadow flex items-center justify-center flex-col text-zinc-800"
   >
     <nav class="flex flex-row gap-3 mb-4">
-      <a
+      <NuxtLink
         v-for="[name, href] in Object.entries(links)"
         :href="href"
         class="text-lg font-bold text-center bg-zinc-100 hover:bg-zinc-300 transition-colors duration-200 bg-opacity-50 w-20 rounded-full border-zinc-400 border-2"
       >
         {{ name }}
-      </a>
+      </NuxtLink>
     </nav>
 
     <img

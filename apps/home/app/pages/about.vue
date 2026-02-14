@@ -3,9 +3,9 @@
     class="w-10/12 m-8 p-8 bg-zinc-100 bg-opacity-30 shadow flex flex-col rounded-xl text-xl"
   >
     <h1 class="text-zinc-800 text-3xl font-bold self-center">关于</h1>
-    <a href="/" class="mt-3 mb-1 text-zinc-800 text-base text-center">
+    <NuxtLink href="/" class="mt-3 mb-1 text-zinc-800 text-base text-center">
       返回主页
-    </a>
+    </NuxtLink>
 
     <hr class="w-3/4 my-4 border-zinc-700 self-center" />
 
