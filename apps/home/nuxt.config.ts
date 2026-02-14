@@ -3,8 +3,18 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
   modules: ["@nuxt/scripts"],
-  css: ["assets/main.scss"],
+  css: ["assets/main.scss", "assets/transition.scss"],
   extends: ["../../packages/shared"],
+  app: {
+    pageTransition: {
+      name: "fade-blur",
+      mode: "out-in",
+    },
+    layoutTransition: {
+      name: "fade-blur",
+      mode: "out-in",
+    },
+  },
   routeRules: {
     "/": {
       swr: true,

@@ -1,0 +1,16 @@
+.fade-blur-enter-active,
+.fade-blur-leave-active {
+  @apply transition-all duration-300;
+}
+
+.fade-blur-enter-from,
+.fade-blur-leave-to {
+  opacity: 0;
+  filter: blur(8px);
+}
+
+.fade-blur-enter-to,
+.fade-blur-leave-from {
+  opacity: 1;
+  filter: blur(0);
+}

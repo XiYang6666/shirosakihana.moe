@@ -11,7 +11,10 @@
 
     <p class="text-zinc-800">
       一个简单的白咲花粉丝站，由
-      <NuxtLink href="https://github.com/XiYang6666" class="underline font-bold">
+      <NuxtLink
+        href="https://github.com/XiYang6666"
+        class="underline font-bold"
+      >
         @XiYang6666
       </NuxtLink>
       运营
