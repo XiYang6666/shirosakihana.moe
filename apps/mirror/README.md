@@ -32,6 +32,8 @@ e.g.:
 | Docker Hub                       | [dhub.shirosakihana.moe](https://dhub.shirosakihana.moe) |
 | GitHub Container Registry (ghcr) | [ghcr.shirosakihana.moe](https://ghcr.shirosakihana.moe) |
 
+## 方法1
+
 配置 Docker 后在 docker pull 地址前加上镜像地址.
 
 e.g.:
@@ -52,6 +54,10 @@ sudo vim /etc/docker/daemon.json
 sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
+
+## 方法2
+
+更改拉取镜像时添加前缀
 
 ```bash
 # 原地址 docker pull nginx
