@@ -1,8 +1,8 @@
 <template>
   <main
-    class="bg-zinc-100 w-[30rem] max-w-[95%] p-6 rounded-[3rem] bg-opacity-30 border-2 border-zinc-100 shadow flex items-center justify-center flex-col text-zinc-800"
+    class="bg-zinc-100 w-[30rem] max-w-[95%] min-w-[20rem] p-6 rounded-[3rem] bg-opacity-30 border-2 border-zinc-100 shadow flex items-center justify-center flex-col text-zinc-800"
   >
-    <nav class="flex flex-row gap-3 mb-4">
+    <nav class="flex flex-row items-center justify-center gap-3 mb-4 w-full">
       <NuxtLink
         v-for="[name, { url, external }] in Object.entries(links)"
         :href="url"
@@ -15,7 +15,10 @@
 
     <img
       src="/avatar.webp"
-      class="w-32 h-32 rounded-full border-zinc-300 border-4"
+      class="rounded-full border-zinc-300 border-4 bg-zinc-500"
+      width="128px"
+      height="128px"
+      alt="avatar"
     />
 
     <h1 class="text-2xl text-center font-bold mt-6">
@@ -62,7 +65,7 @@
     <span class="text-xl">小花世界第一可爱!</span>
   </main>
 
-  <div class="music absolute top-1 right-1">
+  <div id="music" class="absolute top-1 right-1 hidden md:block">
     <iframe
       frameborder="no"
       width="330"
@@ -101,5 +104,3 @@ onMounted(() => {
   }
 });
 </script>
-
-<style></style>

@@ -13,10 +13,10 @@
 <script setup lang="ts">
 const config = useRuntimeConfig();
 const footer = config.public.footer;
-</script>
 
-<style>
-body {
-  @apply overflow-hidden;
-}
-</style>
+useHead({
+  bodyAttrs: {
+    class: ["overflow-hidden"],
+  },
+});
+</script>
