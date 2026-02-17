@@ -89,7 +89,7 @@ definePageMeta({
   layout: "home",
 });
 useSeoMeta({
-  title: "小花可爱 n(*≧▽≦*)n",
+  title: null,
   description: "一个简单的白咲花粉丝站 / A simple Hana Shirosaki fan site",
 });
 useScriptNpm({
