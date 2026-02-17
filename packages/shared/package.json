@@ -6,17 +6,17 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "nuxt": "^4.3.0",
-    "ua-parser-js": "^2.0.8",
-    "vue": "^3.5.27",
+    "@fortawesome/fontawesome-free": "^7.2.0",
+    "nuxt": "^4.3.1",
+    "ua-parser-js": "^2.0.9",
+    "vue": "^3.5.28",
     "vue-router": "^4.6.4",
-    "vue-toastification": "2.0.0-rc.5",
-    "@fortawesome/fontawesome-free": "^7.1.0"
+    "vue-toastification": "2.0.0-rc.5"
   },
   "devDependencies": {
-    "@types/node": "^25.2.0",
     "@nuxtjs/tailwindcss": "^6.14.0",
     "@tailwindcss/typography": "^0.5.19",
+    "@types/node": "^25.2.3",
     "tailwindcss-scrollbar": "^0.1.0"
   }
 }

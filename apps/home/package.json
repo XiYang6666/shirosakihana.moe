@@ -11,15 +11,15 @@
   },
   "dependencies": {
     "@nuxt/scripts": "^0.11.13",
-    "@packages/shared": "workspace:**",
+    "@packages/shared": "workspace:^",
     "js-confetti": "^0.12.0",
     "node-cache": "^5.1.2",
-    "nuxt": "^4.3.0",
+    "nuxt": "^4.3.1",
     "vue": "latest",
     "vue-router": "latest",
     "vue-toastification": "2.0.0-rc.5"
   },
   "devDependencies": {
-    "@waline/client": "^3.8.0"
+    "@waline/client": "^3.12.0"
   }
 }

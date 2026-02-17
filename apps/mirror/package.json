@@ -10,14 +10,14 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@packages/shared": "workspace:*",
     "github-slugger": "^2.0.0",
     "highlight.js": "^11.11.1",
-    "markdown-it": "^14.1.0",
+    "markdown-it": "^14.1.1",
     "markdown-it-anchor": "^9.2.0",
-    "nuxt": "^4.3.0",
-    "vue": "^3.5.27",
-    "vue-router": "^4.6.4",
-    "@packages/shared": "workspace:*"
+    "nuxt": "^4.3.1",
+    "vue": "^3.5.28",
+    "vue-router": "^4.6.4"
   },
   "devDependencies": {
     "@types/markdown-it": "^14.1.2"
