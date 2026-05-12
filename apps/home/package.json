@@ -10,9 +10,9 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/scripts": "^0.11.13",
+    "@nuxt/scripts": "^1.0.6",
     "@packages/shared": "workspace:^",
-    "js-confetti": "^0.12.0",
+    "js-confetti": "^0.13.1",
     "node-cache": "^5.1.2",
     "nuxt": "^4.4.5",
     "vue": "latest",
