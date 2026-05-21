@@ -14,7 +14,7 @@
     "@packages/shared": "workspace:^",
     "js-confetti": "^0.13.1",
     "node-cache": "^5.1.2",
-    "nuxt": "^4.4.5",
+    "nuxt": "^4.4.6",
     "vue": "latest",
     "vue-router": "latest",
     "vue-toastification": "2.0.0-rc.5"
