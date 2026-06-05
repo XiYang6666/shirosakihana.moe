@@ -10,16 +10,16 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/scripts": "^1.0.6",
+    "@nuxt/scripts": "^1.1.1",
     "@packages/shared": "workspace:^",
     "js-confetti": "^0.13.1",
     "node-cache": "^5.1.2",
-    "nuxt": "^4.4.5",
+    "nuxt": "^4.4.7",
     "vue": "latest",
     "vue-router": "latest",
     "vue-toastification": "2.0.0-rc.5"
   },
   "devDependencies": {
-    "@waline/client": "^3.13.0"
+    "@waline/client": "^3.15.2"
   }
 }
