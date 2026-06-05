@@ -70,6 +70,7 @@ import { ref } from "vue";
 
 const links = {
   主页: "https://shirosakihana.moe",
+  状态: "https://status.shirosakihana.moe"
 };
 
 const isOpen = ref(false);
