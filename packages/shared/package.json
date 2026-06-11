@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.14.0",
-    "@tailwindcss/typography": "^0.5.19",
+    "@tailwindcss/typography": "^0.5.20",
     "@types/node": "^25.9.1",
     "sass-embedded": "^1.100.0",
     "tailwindcss-scrollbar": "^0.1.0"
