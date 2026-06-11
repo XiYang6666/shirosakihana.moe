@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.2.0",
-    "nuxt": "^4.4.7",
+    "nuxt": "^4.4.8",
     "ua-parser-js": "^2.0.10",
     "vue": "^3.5.35",
     "vue-router": "^5.1.0",
