@@ -7,16 +7,16 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.2.0",
-    "nuxt": "^4.4.7",
+    "nuxt": "^4.4.8",
     "ua-parser-js": "^2.0.10",
-    "vue": "^3.5.35",
+    "vue": "^3.5.38",
     "vue-router": "^5.1.0",
     "vue-toastification": "2.0.0-rc.5"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.14.0",
-    "@tailwindcss/typography": "^0.5.19",
-    "@types/node": "^25.9.1",
+    "@tailwindcss/typography": "^0.5.20",
+    "@types/node": "^25.9.3",
     "sass-embedded": "^1.100.0",
     "tailwindcss-scrollbar": "^0.1.0"
   }
