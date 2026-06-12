@@ -18,4 +18,8 @@ export default defineNuxtConfig({
       noExternal: ["vue-toastification"],
     },
   },
+
+  experimental: {
+    writeEarlyHints: true,
+  },
 });
