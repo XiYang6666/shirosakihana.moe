@@ -17,7 +17,6 @@
     "@nuxtjs/tailwindcss": "^6.14.0",
     "@tailwindcss/typography": "^0.5.20",
     "@types/node": "^26.2.0",
-    "sass-embedded": "^1.103.1",
-    "tailwindcss-scrollbar": "^0.1.0"
+    "sass-embedded": "^1.103.1"
   }
 }

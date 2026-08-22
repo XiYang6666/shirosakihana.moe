@@ -3,7 +3,11 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
   modules: ["@nuxt/scripts"],
-  css: ["assets/main.scss", "assets/transition.scss","assets/text-shadow.scss"],
+  css: [
+    "assets/main.scss",
+    "assets/transition.scss",
+    "assets/text-shadow.scss",
+  ],
   extends: ["../../packages/shared"],
   app: {
     pageTransition: {
